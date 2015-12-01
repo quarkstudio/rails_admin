@@ -35,7 +35,7 @@ end
 
 group :test do
   gem 'cancan', '>= 1.6'
-  gem 'cancancan', '~> 1.9'
+  gem 'cancancan', '~> 1.12.0'
   gem 'capybara', '>= 2.1'
   gem 'carrierwave', '>= 0.8'
   gem 'coveralls'
@@ -53,6 +53,10 @@ group :test do
   gem 'rubocop', '~> 0.31.0'
   gem 'simplecov', '>= 0.9', require: false
   gem 'timecop', '>= 0.5'
+
+  platforms :ruby_19 do
+    gem 'tins', '~> 1.6.0'
+  end
 
   platforms :ruby_21, :ruby_22 do
     gem 'refile', '~> 0.5', require: 'refile/rails'
